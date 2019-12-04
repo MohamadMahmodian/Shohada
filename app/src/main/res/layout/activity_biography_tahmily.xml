@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generic.biogerafi.Biogerafi">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/toolbar_bio"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/img_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="59dp"
+            android:background="@drawable/icon_appname"
+            android:gravity="center"
+            android:text="بیوگرافی شهید"
+            android:textColor="#7C1818"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/toolbar_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/click_icons"
+            android:clickable="true"
+            android:layout_gravity="left"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/icon_back_page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/img_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bio"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_img_bigraohy"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moqadame">
+
+                <ImageView
+                    android:id="@+id/img_bigraohy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/splash_sameni"/>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/moqadame"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="مقدمه"
+                android:textColor="#7C1818"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/lbl_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="کشور :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moqadame" />
+            <TextView
+                android:id="@+id/txt_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="ایران"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_country"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_country"
+                app:layout_constraintTop_toTopOf="@+id/lbl_country" />
+            <TextView
+                android:id="@+id/lbl_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="مرکز استان :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_country" />
+            <TextView
+                android:id="@+id/txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="تهران"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_city"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_city"
+                app:layout_constraintTop_toTopOf="@+id/lbl_city" />
+            <TextView
+                android:id="@+id/lbl_incity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="شهر :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_city" />
+            <TextView
+                android:id="@+id/txt_incity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="ورامین"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_incity"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_incity"
+                app:layout_constraintTop_toTopOf="@+id/lbl_incity" />
+            <TextView
+                android:id="@+id/lbl_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="محله :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="18dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_incity" />
+            <TextView
+                android:id="@+id/txt_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="اسفندآباد"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_area"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_area"
+                app:layout_constraintTop_toTopOf="@+id/lbl_area" />
+            <TextView
+                android:id="@+id/lbl_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="تاریخ تولد :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_area" />
+            <TextView
+                android:id="@+id/txt_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="1354/5/2"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_birthdate"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_birthdate"
+                app:layout_constraintTop_toTopOf="@+id/lbl_birthdate" />
+            <TextView
+                android:id="@+id/lbl_deathdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="تاریخ شهادت :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="18dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_birthdate" />
+            <TextView
+                android:id="@+id/txt_deathdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="1368/9/2"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_deathdate"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_deathdate"
+                app:layout_constraintTop_toTopOf="@+id/lbl_deathdate" />
+            <TextView
+                android:id="@+id/lbl_degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="درجه سازمانی :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_deathdate" />
+            <TextView
+                android:id="@+id/txt_degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="سروان"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_degree"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_degree"
+                app:layout_constraintTop_toTopOf="@+id/lbl_degree" />
+            <TextView
+                android:id="@+id/lbl_areadeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="محل شهادت :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_degree" />
+            <TextView
+                android:id="@+id/txt_areadeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="فکه"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_areadeath"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_areadeath"
+                app:layout_constraintTop_toTopOf="@+id/lbl_areadeath" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_areadeath"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="#fff"/>
+            <TextView
+                android:id="@+id/header_zendeginame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="زندگینامه"
+                android:textColor="#7C1818"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/txt_zendeginame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/header_zendeginame"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:scrollbars="vertical"
+                android:gravity="center"
+                android:textColor="#000"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="100sp"
+                android:autoSizeStepGranularity="2sp"
+                android:text="گفتم: اصلا چرا بايد اين قدر خودمون رو زجر بديم و پسته بشكنيم، پاشيم بريم بخوابيم. با وجود اين كه او هم مثل من تا نيمه شب كار مي كرد و خسته بود، گفت: نه، اول اينا رو تموم مي كنيم بعد مي ريم مي خوابيم؛ هر چي باشه ما هم بايد اندازه خودمون به بابا كمك کنیم. يادم هست محمود مدام يادآوري مي كرد: نكنه از اين پسته ها بخوري! اگه صاحبش راضي نباشه، جواب دادنش توي اون دنيا خيلي سخته.اگر پسته اي از زير چكش در مي رفت و اين طرف و آن طرف مي افتاد، تا پيداش نمي كرد و نمي ريخت روي بقيه پسته ها، خاطرش جمع نمي شد.موقع حساب كتاب كه مي شد، صاحب پسته ها پول كمتري به ما مي داد؛ محمود هم مثل من دل خوشي از او نداشت ولي هر بار، ازش رضايت مي گرفت و مي گفت: آقا راضي باشين اگه كم و زيادي شده.تو جبهه هم دیگر را می دیدیم.وقتی برمی گشتیم شهر، کم تر. همان جا هم دو سه روز یک بار باید می رفتم می دیدمش. نمی دیدمش، روزم شب نمی شد. مجروح شده بود.نگرانش بودم. هم نگران هم دلتنگ. نرفتم تا خودش پیغام داد « بگید بیاد ببینمش.دلم تنگ شده. » خودم هم مجروح بودم. با عصا رفتم بیمارستان. روی تخت دراز کشیده بود. آستین خالیش را نگاه می کردم. او حرف می زد، من توی این فکر بودم « فرمانده لشکر ؟ بی دست؟ » یک نگه می کرد به من، یک نگاه به دستش، می خندید.
+
+
+
+می پرسم « درد داری ؟ » می گوید « نه زیاد.» - می خوای مسکن بهت بدم؟ - نه. می گیم « هرطور راحتی.» لجم گرفته. با خودم می گویم « این دیگه کیه ؟ دستش قطع شده، صداش در نمی آد.»رفتیم بیمارستان، دو روز پیشش ماندیم. دیدم محسن رضایی آمد و فرمانده های ارتش وسپاه آمدند و کی و کی.امام جمعه ی اصفهان هم هرچند روز یک بار سر می زد بهش. بعد هم با هلی کوپتر از یزد آوردندش اصفهان. هرکس می فهمید من پدرش هستم، دست می انداخت گردنمو ماچ و بوسه و التماس دعا. من هم می گفتم « چه می دونم والا ! تا دوسال پیش که بسیجی بود.انگار حالا ها فرمانده لشکر شده. »اولين بار بود سپاه مى آمدم. ديدم خيلى از بچه هايى كه مى شناسم، آنجا هستند. بيشترشان رفيق هاى سيد على، داداشم بودند. غلام من را ديد. پرسيد «تو اومده اى اينجا چى كار؟»از اين كه توى جمع به اين شلوغى، يكى من را تحويل گرفت، خيلى ذوق كردم. گفتم «اومدم ببينم چه خبره؟ چه كارى از دست ما بر مى آد؟» صحبت مى كرديم كه يكى از ساختمان آمد بيرون. غلام دست او را گرفت. كشيد طرف من كه معرفيش بكند. گفت «اين مثل برادرت، سيد عليه.»
+بلند قد بود. قيافه اش براى من خيلى جذاب بود. نگاهى بهم كرد و گفت «بارك اللّه».
+«بارك اللّه» اش را تا آخر عمر از يادم نمى رود. خيلى خوشم آمد. رفت طرف چند نفر و مشغول صحبت شدند. بس كه حواسم بهش بود، غلام را گم كردم. خيلى دلم مى خواست بشناسمش. چند روز توى مسجد جامع ديدمش. صداش ميكردند محمد.
+جهان آرا بود."
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shohada">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/CustomToolbarStyle">
+        <activity android:name=".generic.khaterat.EdameMatlab"></activity>
+        <activity android:name=".generic.khaterat.AddKhatere" />
+        <activity
+            android:name=".generic.gallery.PreviewImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".generic.khaterat.Khaterat"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".generic.gallery.Gallery"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".menu.menu.Khordad.KhordadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".menu.menu.modafeaneHaram.HaramActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".menu.menu.tahmily.TahmiliActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".meuNavigationDrawer.Setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".meuNavigationDrawer.AboutMe"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".generic.biogerafi.Biogerafi"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name=".imagePicker.ImagePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomToolbarStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

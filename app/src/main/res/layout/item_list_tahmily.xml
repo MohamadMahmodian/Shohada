@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_toolbar">
+
+            <TextView
+                android:id="@+id/lbl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="نام :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                android:text="رسول"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_name"
+                app:layout_constraintEnd_toStartOf="@+id/lbl_name"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_name"
+                app:layout_constraintStart_toEndOf="@+id/card_img_shahid_tahmily"
+                app:layout_constraintTop_toTopOf="@+id/lbl_name" />
+
+            <TextView
+                android:id="@+id/lbl_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="نام خانوادگی :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_name"/>
+
+            <TextView
+                android:id="@+id/txt_family"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                android:text="تاجیک"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_family"
+                app:layout_constraintEnd_toStartOf="@+id/lbl_family"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_family"
+                app:layout_constraintStart_toEndOf="@+id/card_img_shahid_tahmily"
+                app:layout_constraintTop_toTopOf="@+id/lbl_family" />
+
+            <TextView
+                android:id="@+id/lbl_name_father"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="نام پدر :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_family"/>
+
+            <TextView
+                android:id="@+id/txt_name_father"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                android:text="رضا"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_name_father"
+                app:layout_constraintEnd_toStartOf="@+id/lbl_name_father"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_name_father"
+                app:layout_constraintStart_toEndOf="@+id/card_img_shahid_tahmily"
+                app:layout_constraintTop_toTopOf="@+id/lbl_name_father" />
+
+            <TextView
+                android:id="@+id/lbl_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:text="دسته شهید :"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/lbls"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_name_father"/>
+
+            <TextView
+                android:id="@+id/txt_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/txt_List_item"
+                android:textSize="@dimen/txt"
+                android:text="دفاع مقدس"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_type"
+                app:layout_constraintEnd_toStartOf="@+id/lbl_type"
+                app:layout_constraintRight_toLeftOf="@+id/lbl_type"
+                app:layout_constraintStart_toEndOf="@+id/card_img_shahid_tahmily"
+                app:layout_constraintTop_toTopOf="@+id/lbl_type" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_img_shahid_tahmily"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <ImageView
+                    android:id="@+id/img_shahid_tahmily"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_chafie"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cons"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#FFF"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_type" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <Button
+                        android:id="@+id/btn_zendeginame"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_btns_list"
+                        android:gravity="center"
+                        android:text="زندگینامه"
+                        android:textColor="@color/txt_List_item"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btn_gallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/background_btns_list"
+                        android:gravity="center"
+                        android:text="گالری"
+                        android:textColor="@color/txt_List_item"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_khaterat"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/btn_zendeginame"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/btn_khaterat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_btns_list"
+                        android:gravity="center"
+                        android:text="خاطرات"
+                        android:textColor="@color/txt_List_item"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#CE0000</color>
+    <color name="colorPrimaryDark">#CE0000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="lbl_List_item">#FFF</color>
+    <color name="txt_List_item">#7C1818</color>
+</resources>

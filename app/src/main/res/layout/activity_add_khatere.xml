@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generic.khaterat.AddKhatere">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/toolbar_khaterat"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/img_toolbar">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="59dp"
+            android:background="@drawable/icon_appname"
+            android:gravity="center"
+            android:text="اضافه کردن خاطره"
+            android:textColor="#7C1818"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/toolbar_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/click_icons"
+            android:clickable="true"
+            android:layout_gravity="left"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/icon_back_page"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_khaterat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:id="@+id/lbl_Title_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="عنوان :"
+            android:textColor="@color/lbl_List_item"
+            android:textSize="@dimen/lbls"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/background_edittext_addkhatere"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/lbl_Title_add"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/edit_title_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:padding="10dp"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/txt"
+                android:gravity="right|center_vertical"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lbl_nameRavi_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="نام راوی :"
+            android:textColor="@color/lbl_List_item"
+            android:textSize="@dimen/lbls"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView_nameRavi"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView_nameRavi" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardView_nameRavi"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/background_edittext_addkhatere"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/lbl_nameRavi_add"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <EditText
+                android:id="@+id/edit_nameRavi_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:padding="10dp"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/txt"
+                android:gravity="right|center_vertical"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lbl_phoneRavi_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="تلفن :"
+            android:textColor="@color/lbl_List_item"
+            android:textSize="@dimen/lbls"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView_phoneRavi"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView_phoneRavi" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardView_phoneRavi"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/background_edittext_addkhatere"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/lbl_phoneRavi_add"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_nameRavi">
+
+            <EditText
+                android:id="@+id/txt_phoneRavi_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:padding="10dp"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/txt"
+                android:gravity="right|center_vertical"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lbl_addressRavi_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="16dp"
+            android:text="ادرس :"
+            android:textColor="@color/lbl_List_item"
+            android:textSize="@dimen/lbls"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView_addressRavi"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView_addressRavi" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardView_addressRavi"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/background_edittext_addkhatere"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/lbl_phoneRavi_add"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_phoneRavi">
+
+            <EditText
+                android:id="@+id/edit_addressRavi_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:padding="10dp"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/txt"
+                android:gravity="right|center_vertical"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lbl_matn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="متن :"
+            android:textColor="@color/lbl_List_item"
+            android:textSize="@dimen/lbls"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_addressRavi"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardView_matn"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_edittext_addkhatere"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_matn_add">
+
+            <EditText
+                android:id="@+id/edit_matn_add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:padding="10dp"
+                android:textColor="@color/lbl_List_item"
+                android:textSize="@dimen/txt"
+                android:gravity="right"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="#FFF"
+            android:text="ثبت خاطره"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt"
+            android:textColor="@color/txt_List_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
