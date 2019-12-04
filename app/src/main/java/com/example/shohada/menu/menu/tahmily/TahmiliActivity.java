@@ -14,6 +14,7 @@ import com.example.shohada.generic.AdapterListShahidan;
 import com.example.shohada.generic.ModelShahid;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -137,6 +138,54 @@ public class TahmiliActivity extends AppCompatActivity {
                 toolbar.setVisibility(View.VISIBLE);
             }
         });
+
+    }
+
+    public void get__Volley() {
+        //RefreshLayout.setVisibility(View.VISIBLE);
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("active_user", MCS.getActiveUserSession(getApplicationContext()));
+        params.put("status","get_survey");
+
+        new myVolley(getApplicationContext(),user_id,params){
+
+            @Override
+            public void onResponse(String response) {
+                super.onResponse(response);
+                try {
+
+                    Connection.response_structure jsonObj  = new Gson().fromJson(response, Connection.response_structure.class);
+                    String result = jsonObj.result;
+                    Object data = jsonObj.data;
+
+                    if (result.equals("ok")) {
+
+                        String ss = ((LinkedTreeMap) data).get("arr_survey").toString();
+                        JSONArray jsonArray = new JSONArray(ss);
+
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            history.add(new HistorySurveyModel(jsonArray.getJSONObject(i).get("question").toString(), jsonArray.getJSONObject(i).get("comment").toString(), jsonArray.getJSONObject(i).get("expire_date").toString(), jsonArray.getJSONObject(i).get("datee").toString(), jsonArray.getJSONObject(i).get("option_name").toString()));
+                        }
+                        historySurveyAdapter = new HistorySurveyAdapter(history,getApplicationContext());
+                        recyclerView.setAdapter(historySurveyAdapter);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+                    }
+
+                }catch (Exception e){
+
+                }
+            }
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+
+
+
+            }
+        };
 
     }
 }
